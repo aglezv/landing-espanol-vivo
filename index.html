@@ -4,7 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Español Vivo – Aprende como los niños</title>
+  <link rel="icon" href="https://fav.farm/📘" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    .zoom-in {
+      transform: scale(0.95);
+      opacity: 0;
+      animation: zoomIn 0.8s ease-out forwards;
+    }
+    @keyframes zoomIn {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-800 font-sans">
   <header class="flex items-center justify-between p-6 border-b">
@@ -14,7 +37,7 @@
     </nav>
   </header>
 
-  <main class="max-w-3xl mx-auto p-6">
+  <main class="max-w-3xl mx-auto p-6 fade-in">
     <h1 class="text-3xl font-bold mb-2">Aprende como los niños,<br />habla como un nativo</h1>
     <p class="text-lg text-gray-600 mb-6">Spanisch wie ein Kind lernen – Sprich wie ein Muttersprachler</p>
 
@@ -32,21 +55,22 @@
 
     <h2 class="text-xl font-semibold mb-4">Que incluye | Was ist enthalten</h2>
     <div class="grid grid-cols-2 gap-4 mb-8">
-      <div>🎧 Audios reales con personajes<br /><span class="text-sm text-gray-600">Echte Hörbeispiele mit Figuren</span></div>
-      <div>📺 Escenas visuales y vídeos<br /><span class="text-sm text-gray-600">Visuelle Szenen und Videos</span></div>
-      <div>🧩 Actividades interactivas<br /><span class="text-sm text-gray-600">Interaktive Übungen</span></div>
-      <div>📘 Método sin gramática<br /><span class="text-sm text-gray-600">Grammatikfreies Lernen</span></div>
-      <div>🧑‍🏫 Soporte personalizado<br /><span class="text-sm text-gray-600">Persönliche Unterstützung</span></div>
-      <div>💙 Aprendizaje natural y emocional<br /><span class="text-sm text-gray-600">Natürliches und emotionales Lernen</span></div>
+      <div class="zoom-in">🎧 Audios reales con personajes<br /><span class="text-sm text-gray-600">Echte Hörbeispiele mit Figuren</span></div>
+      <div class="zoom-in">📺 Escenas visuales y vídeos<br /><span class="text-sm text-gray-600">Visuelle Szenen und Videos</span></div>
+      <div class="zoom-in">🧩 Actividades interactivas<br /><span class="text-sm text-gray-600">Interaktive Übungen</span></div>
+      <div class="zoom-in">📘 Método sin gramática<br /><span class="text-sm text-gray-600">Grammatikfreies Lernen</span></div>
+      <div class="zoom-in">🧑‍🏫 Soporte personalizado<br /><span class="text-sm text-gray-600">Persönliche Unterstützung</span></div>
+      <div class="zoom-in">💙 Aprendizaje natural y emocional<br /><span class="text-sm text-gray-600">Natürliches und emotionales Lernen</span></div>
     </div>
 
     <div class="mb-6">
       <p class="font-semibold text-lg mb-2">🚀 El curso se está desarrollando – muy pronto abriremos inscripciones.</p>
       <p class="mb-4">💌 Déjanos tu correo y recibirás una clase gratuita en cuanto esté disponible.</p>
       <p class="mb-4 text-sm text-gray-600">🚀 Der Kurs befindet sich in der Entwicklung – die Anmeldung öffnet bald!<br />💌 Gib deine E-Mail-Adresse ein, und du bekommst kostenlos eine erste Lektion.</p>
-      <form class="flex gap-2 max-w-md">
-        <input type="email" placeholder="Email" class="border rounded px-3 py-2 flex-grow" required />
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Suscribirme</button>
+      <form action="https://formsubmit.co/cursoespanoloficial.los@gmail.com" method="POST" class="flex gap-2 max-w-md flex-col sm:flex-row">
+        <input type="hidden" name="_subject" value="Nueva suscripción desde la landing page">
+        <input type="email" name="email" placeholder="Email" class="border rounded px-3 py-2 flex-grow" required />
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Suscribirme</button>
       </form>
     </div>
   </main>
@@ -59,3 +83,6 @@
   </footer>
 </body>
 </html>
+
+   
+ 
